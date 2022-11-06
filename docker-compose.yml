@@ -17,10 +17,10 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    env_file: .env
+    #env_file: .env
     environment:
-      - PORT=${PORT}
-      - MONGO_URL=${MONGO_URL}
+      - PORT=3333
+      - MONGO_URL=mongodb://admin:1234@mongo/?authMechanism=DEFAULT
     ports:
       - 3333:3333
     links:

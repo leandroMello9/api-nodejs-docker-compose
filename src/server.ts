@@ -1,7 +1,7 @@
 import app from "./app";
 import mongoose from 'mongoose';
 
-mongoose.connect(process.env.MONGO_URL, (err) => {
+mongoose.connect("mongodb://admin:1234@mongo/?authMechanism=DEFAULT", (err) => {
     if(err) {
         console.log("Error ao connectar ao banco", err)
     }
